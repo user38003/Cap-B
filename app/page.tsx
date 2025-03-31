@@ -20,7 +20,7 @@ export default function Page() {
                                 |
                             </span>
                             <h2 className="text-xl" data-oid="mb-dxjq">
-                                Nanoengineering Research Team
+                                Nanometrology Research Team
                             </h2>
                         </div>
 
@@ -184,12 +184,13 @@ export default function Page() {
                                     className="text-4xl font-bold text-white sm:text-5xl md:text-6xl"
                                     data-oid="gaeaz44"
                                 >
-                                    Advancing Nanotechnology Research
+                                    Precision at the Nanoscale
                                 </h1>
                                 <p className="mt-6 text-xl text-white/90" data-oid="p50o7wh">
-                                    The University of Sydney's Nanoengineering Team is at the
-                                    forefront of developing innovative solutions to global
-                                    challenges through nanoscale engineering.
+                                    The University of Sydney's Nanometrology Team is pioneering
+                                    advanced measurement techniques at the nanoscale, enabling
+                                    breakthroughs in science and technology through unprecedented
+                                    precision.
                                 </p>
                                 <div
                                     className="mt-8 flex flex-col sm:flex-row gap-4"
@@ -230,24 +231,24 @@ export default function Page() {
                                     className="text-3xl font-bold text-gray-900 mb-6"
                                     data-oid="2jebzgx"
                                 >
-                                    About Our Nanoengineering Team
+                                    About Our Nanometrology Team
                                 </h2>
                                 <p className="text-lg text-gray-700 mb-4" data-oid="nlzzj2s">
-                                    Established in 2010, the University of Sydney's Nanoengineering
-                                    Research Team brings together experts from materials science,
-                                    physics, chemistry, and engineering to tackle complex challenges
-                                    at the nanoscale.
+                                    Established in 2012, the University of Sydney's Nanometrology
+                                    Research Team unites experts in metrology, physics,
+                                    instrumentation, and computational science to develop
+                                    cutting-edge measurement techniques at the nanoscale.
                                 </p>
                                 <p className="text-lg text-gray-700 mb-4" data-oid="pnuvobg">
-                                    Our interdisciplinary approach enables us to develop
-                                    cutting-edge technologies with applications in medicine, energy,
-                                    electronics, and environmental remediation.
+                                    Our precision measurement technologies enable advancements in
+                                    semiconductor fabrication, quantum computing, biological
+                                    imaging, materials characterization, and standards development.
                                 </p>
                                 <p className="text-lg text-gray-700" data-oid="7h7zcw:">
-                                    With state-of-the-art facilities and a collaborative research
-                                    environment, we're committed to training the next generation of
-                                    nanoengineers while advancing scientific knowledge and creating
-                                    real-world impact.
+                                    With our ultra-high precision instruments and multidisciplinary
+                                    expertise, we're establishing new measurement standards and
+                                    techniques that drive innovation across scientific disciplines
+                                    and industries.
                                 </p>
                             </div>
                             <div className="bg-gray-100 p-8 rounded-lg" data-oid="j3m56mu">
@@ -275,7 +276,7 @@ export default function Page() {
                                             />
                                         </svg>
                                         <span className="text-gray-700" data-oid="kdip:31">
-                                            Nanomaterials for energy storage and conversion
+                                            Atomic force microscopy techniques
                                         </span>
                                     </li>
                                     <li className="flex items-start" data-oid="2w2f8h2">
@@ -295,7 +296,7 @@ export default function Page() {
                                             />
                                         </svg>
                                         <span className="text-gray-700" data-oid="bd45dut">
-                                            Nanoparticle-based drug delivery systems
+                                            Quantum metrology standards
                                         </span>
                                     </li>
                                     <li className="flex items-start" data-oid="_lf1x:p">
@@ -315,7 +316,7 @@ export default function Page() {
                                             />
                                         </svg>
                                         <span className="text-gray-700" data-oid="nlh00dp">
-                                            Quantum dots for biomedical imaging
+                                            Super-resolution optical microscopy
                                         </span>
                                     </li>
                                     <li className="flex items-start" data-oid="fk0c:u2">
@@ -335,7 +336,7 @@ export default function Page() {
                                             />
                                         </svg>
                                         <span className="text-gray-700" data-oid="smhtua_">
-                                            Nanoscale sensors for environmental monitoring
+                                            Electron microscopy calibration
                                         </span>
                                     </li>
                                     <li className="flex items-start" data-oid="8-l:qml">
@@ -355,7 +356,7 @@ export default function Page() {
                                             />
                                         </svg>
                                         <span className="text-gray-700" data-oid="0q9vsnw">
-                                            Nanoelectronics and quantum computing
+                                            Computational nanometrology
                                         </span>
                                     </li>
                                 </ul>
@@ -389,12 +390,13 @@ export default function Page() {
                                             className="text-xl font-bold text-gray-900 mb-2"
                                             data-oid="npu0co1"
                                         >
-                                            New Grant Awarded for Quantum Dot Research
+                                            New Grant Awarded for Quantum Metrology Research
                                         </h3>
                                         <p className="text-gray-700" data-oid="v_rmwzj">
-                                            Our team has received $2.5M in funding to develop
-                                            next-generation quantum dot technologies for medical
-                                            imaging.
+                                            Our team has received $3.2M in funding to develop
+                                            quantum-enhanced measurement techniques with
+                                            unprecedented precision for next-generation
+                                            semiconductor manufacturing.
                                         </p>
                                     </div>
                                 </div>
@@ -414,11 +416,12 @@ export default function Page() {
                                             className="text-xl font-bold text-gray-900 mb-2"
                                             data-oid="8h4kue8"
                                         >
-                                            Breakthrough in Nanoscale Battery Technology
+                                            Breakthrough in Atomic Force Microscopy Calibration
                                         </h3>
                                         <p className="text-gray-700" data-oid="dcdsura">
-                                            Our researchers have developed a novel nanomaterial that
-                                            could double the capacity of lithium-ion batteries.
+                                            Our researchers have developed a new calibration
+                                            standard that improves measurement accuracy by 10x for
+                                            atomic force microscopy.
                                         </p>
                                     </div>
                                 </div>
@@ -438,11 +441,12 @@ export default function Page() {
                                             className="text-xl font-bold text-gray-900 mb-2"
                                             data-oid="sbv2b0l"
                                         >
-                                            International Collaboration with MIT Announced
+                                            International Collaboration with NIST Announced
                                         </h3>
                                         <p className="text-gray-700" data-oid="f-8urtp">
-                                            Our team will be partnering with MIT's Department of
-                                            Materials Science on a joint nanoelectronics project.
+                                            Our team will be partnering with the National Institute
+                                            of Standards and Technology on developing new nanoscale
+                                            reference materials.
                                         </p>
                                     </div>
                                 </div>
@@ -473,19 +477,20 @@ export default function Page() {
                                         className="text-2xl font-bold text-gray-900 mb-4"
                                         data-oid="-43hk--"
                                     >
-                                        Nanomaterials for Sustainable Energy
+                                        Advanced Scanning Probe Microscopy
                                     </h3>
                                     <p className="text-gray-700 mb-4" data-oid="n2.dzyu">
-                                        Our team is developing novel nanomaterials for
-                                        next-generation solar cells, batteries, and fuel cells. By
-                                        engineering materials at the nanoscale, we can enhance
-                                        energy conversion efficiency and storage capacity while
-                                        reducing costs and environmental impact.
+                                        Our team is developing next-generation scanning probe
+                                        microscopy techniques with unprecedented spatial resolution
+                                        and measurement precision. These tools enable atomic-scale
+                                        characterization of materials and devices critical for
+                                        semiconductor and quantum computing applications.
                                     </p>
                                     <p className="text-gray-700 mb-6" data-oid="2uw67a5">
-                                        Recent breakthroughs include a new class of nanostructured
-                                        catalysts for hydrogen production and carbon-based quantum
-                                        dots for solar harvesting.
+                                        Recent breakthroughs include a novel force-sensing
+                                        cantilever with femtonewton sensitivity and a
+                                        multi-parameter measurement system that simultaneously
+                                        captures topography, electrical, and mechanical properties.
                                     </p>
                                     <button
                                         className="px-6 py-2 bg-[#d7153a] text-white rounded-md hover:bg-[#b01232] transition-colors"
@@ -510,18 +515,19 @@ export default function Page() {
                                         className="text-2xl font-bold text-gray-900 mb-4"
                                         data-oid="v.wetue"
                                     >
-                                        Nanoparticle Drug Delivery Systems
+                                        Quantum Metrology Standards
                                     </h3>
                                     <p className="text-gray-700 mb-4" data-oid="slpnk-w">
-                                        We're pioneering targeted drug delivery systems using
-                                        engineered nanoparticles that can navigate the body and
-                                        release therapeutic agents precisely where they're needed,
-                                        minimizing side effects and maximizing efficacy.
+                                        We're developing quantum-based measurement standards that
+                                        leverage fundamental physical constants to create absolute
+                                        references for length, time, and electrical measurements at
+                                        the nanoscale, ensuring traceability and reproducibility in
+                                        nanoscience research.
                                     </p>
                                     <p className="text-gray-700 mb-6" data-oid="8qadmc6">
-                                        Our current focus includes biodegradable polymer
-                                        nanoparticles for cancer treatment and stimuli-responsive
-                                        nanomaterials for controlled drug release.
+                                        Our current focus includes single-electron transistor
+                                        standards, quantum Hall resistance references, and optical
+                                        frequency combs for ultra-precise dimensional metrology.
                                     </p>
                                     <button
                                         className="px-6 py-2 bg-[#d7153a] text-white rounded-md hover:bg-[#b01232] transition-colors"
@@ -546,18 +552,19 @@ export default function Page() {
                                         className="text-2xl font-bold text-gray-900 mb-4"
                                         data-oid="3h09e3b"
                                     >
-                                        Nanoscale Environmental Sensors
+                                        Super-Resolution Optical Microscopy
                                     </h3>
                                     <p className="text-gray-700 mb-4" data-oid="sl-z:5:">
-                                        Our research is creating ultra-sensitive nanoscale sensors
-                                        capable of detecting pollutants, pathogens, and other
-                                        environmental hazards at previously undetectable
-                                        concentrations.
+                                        Our research is advancing super-resolution optical
+                                        microscopy techniques that break the diffraction limit,
+                                        enabling optical imaging with nanometer-scale resolution for
+                                        biological and materials science applications.
                                     </p>
                                     <p className="text-gray-700 mb-6" data-oid="d2r9o3t">
-                                        These sensors integrate with wireless networks to enable
-                                        real-time environmental monitoring for applications in water
-                                        quality assessment, air pollution tracking, and food safety.
+                                        We're developing novel fluorophores, adaptive optics
+                                        systems, and computational algorithms that together push the
+                                        boundaries of what can be visualized in living cells and
+                                        complex materials.
                                     </p>
                                     <button
                                         className="px-6 py-2 bg-[#d7153a] text-white rounded-md hover:bg-[#b01232] transition-colors"
@@ -605,14 +612,14 @@ export default function Page() {
                                             className="text-[#d7153a] font-medium mb-3"
                                             data-oid="8q69.wp"
                                         >
-                                            Director, Nanoengineering Research Team
+                                            Director, Nanometrology Research Team
                                         </p>
                                         <p className="text-gray-700 mb-4" data-oid="169jqkw">
-                                            Ph.D. in Materials Science, MIT
+                                            Ph.D. in Applied Physics, MIT
                                         </p>
                                         <p className="text-gray-700" data-oid=".adheu6">
-                                            Specializes in quantum dot synthesis and applications in
-                                            biomedical imaging.
+                                            Specializes in scanning probe microscopy and quantum
+                                            metrology standards.
                                         </p>
                                     </div>
                                 </div>
@@ -632,14 +639,14 @@ export default function Page() {
                                             className="text-[#d7153a] font-medium mb-3"
                                             data-oid="ulcbsk4"
                                         >
-                                            Deputy Director, Nanoengineering Research Team
+                                            Deputy Director, Nanometrology Research Team
                                         </p>
                                         <p className="text-gray-700 mb-4" data-oid="yhrctb7">
-                                            Ph.D. in Chemical Engineering, Stanford University
+                                            Ph.D. in Precision Engineering, Stanford University
                                         </p>
                                         <p className="text-gray-700" data-oid="-bmqar7">
-                                            Expert in nanomaterials for energy storage and
-                                            conversion.
+                                            Expert in dimensional metrology and calibration
+                                            standards.
                                         </p>
                                     </div>
                                 </div>
@@ -662,11 +669,11 @@ export default function Page() {
                                             Research Program Manager
                                         </p>
                                         <p className="text-gray-700 mb-4" data-oid="jh2imud">
-                                            Ph.D. in Physics, University of Cambridge
+                                            Ph.D. in Optical Physics, University of Cambridge
                                         </p>
                                         <p className="text-gray-700" data-oid="ug:b41h">
-                                            Specializes in nanoelectronics and quantum computing
-                                            applications.
+                                            Specializes in super-resolution microscopy and optical
+                                            metrology.
                                         </p>
                                     </div>
                                 </div>
@@ -703,7 +710,7 @@ export default function Page() {
                                             Senior Research Fellow
                                         </p>
                                         <p className="text-sm text-gray-700" data-oid="7ja7i--">
-                                            Nanomaterials for drug delivery
+                                            Electron microscopy metrology
                                         </p>
                                     </div>
                                 </div>
@@ -726,7 +733,7 @@ export default function Page() {
                                             Senior Research Fellow
                                         </p>
                                         <p className="text-sm text-gray-700" data-oid="h2j1l6-">
-                                            Nanoscale sensors and devices
+                                            Nanoscale dimensional standards
                                         </p>
                                     </div>
                                 </div>
@@ -749,7 +756,7 @@ export default function Page() {
                                             Senior Research Fellow
                                         </p>
                                         <p className="text-sm text-gray-700" data-oid="paes58c">
-                                            Nanoelectronics and quantum computing
+                                            Quantum sensing and metrology
                                         </p>
                                     </div>
                                 </div>
@@ -772,7 +779,7 @@ export default function Page() {
                                             Senior Research Fellow
                                         </p>
                                         <p className="text-sm text-gray-700" data-oid="otd:0:8">
-                                            Nanomaterials for energy applications
+                                            Computational nanometrology
                                         </p>
                                     </div>
                                 </div>
@@ -848,8 +855,8 @@ export default function Page() {
                                             className="text-xl font-bold text-gray-900 mb-3"
                                             data-oid="vfmtt0w"
                                         >
-                                            Quantum Dot-Based Fluorescent Probes for Ultra-Sensitive
-                                            Detection of Cancer Biomarkers
+                                            Traceable Atomic Force Microscopy for Dimensional
+                                            Nanometrology in Advanced Semiconductor Manufacturing
                                         </h4>
                                         <p className="text-gray-700 mb-4" data-oid="oa:lt4w">
                                             Chen S., Wilson J., Patel E., et al.
@@ -858,13 +865,13 @@ export default function Page() {
                                             className="text-[#d7153a] font-medium mb-4"
                                             data-oid="4uaaaa7"
                                         >
-                                            Nature Nanotechnology, 2023
+                                            Metrologia, 2023
                                         </p>
                                         <p className="text-gray-700 mb-4" data-oid="9sn5l8r">
-                                            This paper describes a novel quantum dot platform that
-                                            enables detection of cancer biomarkers at femtomolar
-                                            concentrations, representing a 100-fold improvement over
-                                            existing technologies.
+                                            This paper describes a novel calibration framework for
+                                            atomic force microscopy that achieves sub-nanometer
+                                            measurement uncertainty, critical for next-generation
+                                            semiconductor process control.
                                         </p>
                                         <button
                                             className="px-4 py-2 border border-[#d7153a] text-[#d7153a] rounded-md hover:bg-[#d7153a] hover:text-white transition-colors"
@@ -883,8 +890,8 @@ export default function Page() {
                                             className="text-xl font-bold text-gray-900 mb-3"
                                             data-oid="9lqwnlf"
                                         >
-                                            Nanostructured Catalysts for Efficient Hydrogen
-                                            Production via Water Splitting
+                                            Quantum-Enhanced Super-Resolution Microscopy: Breaking
+                                            the 10nm Optical Resolution Barrier
                                         </h4>
                                         <p className="text-gray-700 mb-4" data-oid="wgiczft">
                                             Okonjo M., Rodriguez M., Rahman A., et al.
@@ -893,13 +900,14 @@ export default function Page() {
                                             className="text-[#d7153a] font-medium mb-4"
                                             data-oid="-tfoqbw"
                                         >
-                                            Science, 2022
+                                            Nature Methods, 2022
                                         </p>
                                         <p className="text-gray-700 mb-4" data-oid="4c5gv4o">
-                                            This research presents a breakthrough in catalyst design
-                                            using earth-abundant materials structured at the
-                                            nanoscale to achieve record-breaking efficiency in
-                                            hydrogen production.
+                                            This research presents a breakthrough in optical
+                                            microscopy using quantum-correlated photon pairs to
+                                            achieve unprecedented spatial resolution while
+                                            maintaining high measurement precision and
+                                            reproducibility.
                                         </p>
                                         <button
                                             className="px-4 py-2 border border-[#d7153a] text-[#d7153a] rounded-md hover:bg-[#d7153a] hover:text-white transition-colors"
@@ -1026,9 +1034,9 @@ export default function Page() {
                                                 Address
                                             </h4>
                                             <p className="text-gray-700" data-oid=":qk.v2-">
-                                                Nanoengineering Research Team
+                                                Nanometrology Research Team
                                                 <br data-oid="34j36-f" />
-                                                School of Chemical and Biomolecular Engineering
+                                                School of Physics and Metrology
                                                 <br data-oid="z5i2-uj" />
                                                 The University of Sydney
                                                 <br data-oid="80uv7hh" />
@@ -1061,7 +1069,7 @@ export default function Page() {
                                                 Email
                                             </h4>
                                             <p className="text-gray-700" data-oid="gqw5zyf">
-                                                nanoengineering@sydney.edu.au
+                                                nanometrology@sydney.edu.au
                                             </p>
                                         </div>
                                     </div>
@@ -1188,10 +1196,10 @@ export default function Page() {
                                 University of Sydney
                             </h2>
                             <h3 className="text-lg mb-4" data-oid="d00rhe7">
-                                Nanoengineering Research Team
+                                Nanometrology Research Team
                             </h3>
                             <p className="text-gray-400 mb-6" data-oid="1gt2nds">
-                                Advancing nanotechnology research for a sustainable future.
+                                Advancing precision measurement at the nanoscale.
                             </p>
                             <div className="flex space-x-4" data-oid="zpjf_2j">
                                 <a
