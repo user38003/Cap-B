@@ -90,6 +90,12 @@ export default function Page() {
                                 {' '}
                                 Contact{' '}
                             </button>{' '}
+                            <button
+                                onClick={() => (window.location.href = '/login')}
+                                className="text-white hover:text-white/80 px-3 py-2"
+                            >
+                                Login
+                            </button>
                         </nav>{' '}
                     </div>{' '}
                 </div>{' '}
@@ -149,6 +155,15 @@ export default function Page() {
                                 {' '}
                                 Contact{' '}
                             </button>{' '}
+                            <button
+                                onClick={() => {
+                                    window.location.href = '/login';
+                                    setIsMenuOpen(false);
+                                }}
+                                className="block text-white hover:bg-[#a01030] px-3 py-2 rounded-md w-full text-left"
+                            >
+                                Login
+                            </button>
                         </div>{' '}
                     </div>
                 )}{' '}
