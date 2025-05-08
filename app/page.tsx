@@ -53,46 +53,46 @@ export default function Page() {
                             </button>{' '}
                         </div>{' '}
                         {/* Desktop navigation */}{' '}
-                        <nav className="hidden md:flex space-x-8">
+                        <nav className="hidden md:flex space-x-8 ml-auto">
                             {' '}
                             <button
                                 onClick={() => setActiveTab('about')}
-                                className={`text-white hover:text-white/80 px-3 py-2 ${activeTab === 'about' ? 'border-b-2 border-white' : ''}`}
+                                className={`whitespace-nowrap text-white hover:text-white/80 px-3 py-2 ${activeTab === 'about' ? 'border-b-2 border-white' : ''}`}
                             >
                                 {' '}
                                 About Us{' '}
                             </button>{' '}
                             <button
                                 onClick={() => setActiveTab('research')}
-                                className={`text-white hover:text-white/80 px-3 py-2 ${activeTab === 'research' ? 'border-b-2 border-white' : ''}`}
+                                className={`whitespace-nowrap text-white hover:text-white/80 px-3 py-2 ${activeTab === 'research' ? 'border-b-2 border-white' : ''}`}
                             >
                                 {' '}
                                 Research{' '}
                             </button>{' '}
                             <button
                                 onClick={() => setActiveTab('team')}
-                                className={`text-white hover:text-white/80 px-3 py-2 ${activeTab === 'team' ? 'border-b-2 border-white' : ''}`}
+                                className={`whitespace-nowrap text-white hover:text-white/80 px-3 py-2 ${activeTab === 'team' ? 'border-b-2 border-white' : ''}`}
                             >
                                 {' '}
                                 Our Team{' '}
                             </button>{' '}
                             <button
                                 onClick={() => setActiveTab('publications')}
-                                className={`text-white hover:text-white/80 px-3 py-2 ${activeTab === 'publications' ? 'border-b-2 border-white' : ''}`}
+                                className={`whitespace-nowrap text-white hover:text-white/80 px-3 py-2 ${activeTab === 'publications' ? 'border-b-2 border-white' : ''}`}
                             >
                                 {' '}
                                 Publications{' '}
                             </button>{' '}
                             <button
                                 onClick={() => setActiveTab('contact')}
-                                className={`text-white hover:text-white/80 px-3 py-2 ${activeTab === 'contact' ? 'border-b-2 border-white' : ''}`}
+                                className={`whitespace-nowrap text-white hover:text-white/80 px-3 py-2 ${activeTab === 'contact' ? 'border-b-2 border-white' : ''}`}
                             >
                                 {' '}
                                 Contact{' '}
                             </button>{' '}
                             <button
                                 onClick={() => (window.location.href = '/login')}
-                                className="text-white hover:text-white/80 px-3 py-2"
+                                className="whitespace-nowrap text-white hover:text-white/80 px-3 py-2 ml-4"
                             >
                                 Login
                             </button>
