@@ -1,6 +1,22 @@
 'use client';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function LoginPage() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const router = useRouter();
+
+    const handleLogin = (e: React.FormEvent) => {
+        e.preventDefault();
+        // Example: Check for admin credentials
+        if (email === 'admin@example.com' && password === 'admin123') {
+            router.push('/admin');
+        } else {
+            alert('Invalid credentials');
+        }
+    };
+
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100 relative">
             <a href="/" className="absolute top-4 left-4 text-[#d7153a] hover:text-[#b01232]">
@@ -21,7 +37,7 @@ export default function LoginPage() {
             </a>
             <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
                 <h1 className="text-2xl font-bold text-gray-900 mb-6 text-center">Login</h1>
-                <form className="space-y-6">
+                <form className="space-y-6" onSubmit={handleLogin}>
                     <div>
                         <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                             Email
@@ -29,6 +45,8 @@ export default function LoginPage() {
                         <input
                             type="email"
                             id="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#d7153a] focus:border-[#d7153a]"
                             required
                         />
@@ -40,6 +58,8 @@ export default function LoginPage() {
                         <input
                             type="password"
                             id="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
                             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#d7153a] focus:border-[#d7153a]"
                             required
                         />
