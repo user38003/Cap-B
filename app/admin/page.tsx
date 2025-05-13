@@ -46,7 +46,10 @@ export default function AdminPage() {
                         <p className="text-gray-700 mb-4">
                             View and manage user profiles and permissions.
                         </p>
-                        <button className="px-4 py-2 bg-[#d7153a] text-white rounded-md hover:bg-[#b01232] transition-colors">
+                        <button
+                            onClick={() => (window.location.href = '/admin/user-profiles')}
+                            className="px-4 py-2 bg-[#d7153a] text-white rounded-md hover:bg-[#b01232] transition-colors"
+                        >
                             Go to User Profiles
                         </button>
                     </div>
@@ -55,7 +58,10 @@ export default function AdminPage() {
                         <p className="text-gray-700 mb-4">
                             Update homepage banners and promotional content.
                         </p>
-                        <button className="px-4 py-2 bg-[#d7153a] text-white rounded-md hover:bg-[#b01232] transition-colors">
+                        <button
+                            onClick={() => (window.location.href = '/admin/banners')}
+                            className="px-4 py-2 bg-[#d7153a] text-white rounded-md hover:bg-[#b01232] transition-colors"
+                        >
                             Go to Banners
                         </button>
                     </div>
