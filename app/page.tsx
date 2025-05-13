@@ -90,12 +90,7 @@ export default function Page() {
                                 {' '}
                                 Contact{' '}
                             </button>{' '}
-                            <button
-                                onClick={() => (window.location.href = '/login')}
-                                className="whitespace-nowrap text-white hover:text-white/80 px-3 py-2 ml-4"
-                            >
-                                Login
-                            </button>
+                            
                         </nav>{' '}
                     </div>{' '}
                 </div>{' '}
