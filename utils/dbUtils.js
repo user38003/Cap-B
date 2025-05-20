@@ -9,7 +9,11 @@ export const readTable = (tableName) => {
         throw new Error(`Table "${tableName}" does not exist.`);
     }
     const data = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(data);
+    try {
+        return JSON.parse(data);
+    } catch (err) {
+        throw new Error(`Error parsing JSON in table "${tableName}": ${err.message}`);
+    }
 };
 
 export const writeTable = (tableName, data) => {
@@ -25,4 +29,16 @@ export const updateRecord = (tableName, id, updatedData) => {
     }
     tableData[recordIndex] = { ...tableData[recordIndex], ...updatedData };
     writeTable(tableName, tableData);
+    return tableData[recordIndex];
+};
+
+export const deleteRecord = (tableName, id) => {
+    const tableData = readTable(tableName);
+    const recordIndex = tableData.findIndex((record) => record.id === id);
+    if (recordIndex === -1) {
+        throw new Error(`Record with ID "${id}" not found in table "${tableName}".`);
+    }
+    const deletedRecord = tableData.splice(recordIndex, 1)[0];
+    writeTable(tableName, tableData);
+    return deletedRecord;
 };

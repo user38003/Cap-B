@@ -1,12 +1,8 @@
 [
-    {
-        "id": 1,
-        "username": "john_doe",
-        "password": "password123"
-    },
-    {
-        "id": 2,
-        "username": "jane_doe",
-        "password": "securepassword"
-    }
+  {
+    "id": 1747209030140,
+    "name": "qingzhu",
+    "email": "qingzhu@123.com",
+    "password": "1234"
+  }
 ]

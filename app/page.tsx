@@ -3,6 +3,17 @@ import { useState, useEffect } from 'react';
 export default function Page() {
     const [activeTab, setActiveTab] = useState('about');
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [publications, setPublications] = useState([]);
+
+    useEffect(() => {
+        if (activeTab === 'publications') {
+            fetch('/api/publications')
+                .then((res) => res.json())
+                .then((data) => setPublications(data.publications || []))
+                .catch((err) => console.error(err));
+        }
+    }, [activeTab]);
+
     return (
         <div className="min-h-screen bg-white text-gray-800 font-sans">
             {' '}
@@ -774,68 +785,39 @@ export default function Page() {
                             </h3>{' '}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 {' '}
-                                <div className="bg-white shadow-md rounded-lg overflow-hidden">
-                                    {' '}
-                                    <div className="p-6">
+                                {publications.slice(0, 2).map((pub) => (
+                                    <div
+                                        key={pub.id}
+                                        className="bg-white shadow-md rounded-lg overflow-hidden"
+                                    >
                                         {' '}
-                                        <h4 className="text-xl font-bold text-gray-900 mb-3">
+                                        <div className="p-6">
                                             {' '}
-                                            Traceable Atomic Force Microscopy for Dimensional
-                                            Nanometrology in Advanced Semiconductor
-                                            Manufacturing{' '}
-                                        </h4>{' '}
-                                        <p className="text-gray-700 mb-4">
-                                            {' '}
-                                            Shu S., Wilson J., Patel E., et al.{' '}
-                                        </p>{' '}
-                                        <p className="text-[#d7153a] font-medium mb-4">
-                                            {' '}
-                                            Metrologia, 2023{' '}
-                                        </p>{' '}
-                                        <p className="text-gray-700 mb-4">
-                                            {' '}
-                                            This paper describes a novel calibration framework for
-                                            atomic force microscopy that achieves sub-nanometer
-                                            measurement uncertainty, critical for next-generation
-                                            semiconductor process control.{' '}
-                                        </p>{' '}
-                                        <button className="px-4 py-2 border border-[#d7153a] text-[#d7153a] rounded-md hover:bg-[#d7153a] hover:text-white transition-colors">
-                                            {' '}
-                                            Read Paper{' '}
-                                        </button>{' '}
-                                    </div>{' '}
-                                </div>{' '}
-                                <div className="bg-white shadow-md rounded-lg overflow-hidden">
-                                    {' '}
-                                    <div className="p-6">
-                                        {' '}
-                                        <h4 className="text-xl font-bold text-gray-900 mb-3">
-                                            {' '}
-                                            Quantum-Enhanced Super-Resolution Microscopy: Breaking
-                                            the 10nm Optical Resolution Barrier{' '}
-                                        </h4>{' '}
-                                        <p className="text-gray-700 mb-4">
-                                            {' '}
-                                            Okonjo M., Rodriguez M., Rahman A., et al.{' '}
-                                        </p>{' '}
-                                        <p className="text-[#d7153a] font-medium mb-4">
-                                            {' '}
-                                            Nature Methods, 2022{' '}
-                                        </p>{' '}
-                                        <p className="text-gray-700 mb-4">
-                                            {' '}
-                                            This research presents a breakthrough in optical
-                                            microscopy using quantum-correlated photon pairs to
-                                            achieve unprecedented spatial resolution while
-                                            maintaining high measurement precision and
-                                            reproducibility.{' '}
-                                        </p>{' '}
-                                        <button className="px-4 py-2 border border-[#d7153a] text-[#d7153a] rounded-md hover:bg-[#d7153a] hover:text-white transition-colors">
-                                            {' '}
-                                            Read Paper{' '}
-                                        </button>{' '}
-                                    </div>{' '}
-                                </div>{' '}
+                                            <h4 className="text-xl font-bold text-gray-900 mb-3">
+                                                {' '}
+                                                {pub.title}{' '}
+                                            </h4>{' '}
+                                            <p className="text-gray-700 mb-4"> {pub.authors} </p>{' '}
+                                            <p className="text-[#d7153a] font-medium mb-4">
+                                                {' '}
+                                                {pub.subTitle}{' '}
+                                            </p>{' '}
+                                            <p className="text-gray-700 mb-4">
+                                                {' '}
+                                                {pub.description}{' '}
+                                            </p>{' '}
+                                            <button
+                                                onClick={() =>
+                                                    window.open(pub.pdf, '_blank')
+                                                }
+                                                className="px-4 py-2 border border-[#d7153a] text-[#d7153a] rounded-md hover:bg-[#d7153a] hover:text-white transition-colors"
+                                            >
+                                                {' '}
+                                                Read Paper{' '}
+                                            </button>{' '}
+                                        </div>{' '}
+                                    </div>
+                                ))}{' '}
                             </div>{' '}
                         </div>{' '}
                         <div>
@@ -846,35 +828,38 @@ export default function Page() {
                             </h3>{' '}
                             <div className="space-y-6">
                                 {' '}
-                                {[...Array(5)].map((_, i) => (
-                                    <div key={i} className="bg-white shadow-sm rounded-lg p-6">
+                                {publications.map((pub) => (
+                                    <div
+                                        key={pub.id}
+                                        className="bg-white shadow-sm rounded-lg p-6"
+                                    >
                                         {' '}
                                         <h4 className="text-lg font-bold text-gray-900 mb-2">
                                             {' '}
-                                            Publication Title Goes Here{' '}
+                                            {pub.title}{' '}
                                         </h4>{' '}
                                         <p className="text-gray-700 mb-2">
                                             {' '}
-                                            Authors: [List of authors]{' '}
+                                            Authors: {pub.authors}{' '}
                                         </p>{' '}
                                         <p className="text-[#d7153a] mb-2">
                                             {' '}
-                                            Journal Name, Year{' '}
+                                            {pub.subTitle}{' '}
                                         </p>{' '}
                                         <p className="text-gray-700 mb-4">
                                             {' '}
-                                            Brief description of the publication and its
-                                            significance in the field of nanoengineering.{' '}
+                                            {pub.description}{' '}
                                         </p>{' '}
                                         <div className="flex space-x-4">
                                             {' '}
-                                            <button className="text-[#d7153a] hover:underline">
+                                            <button
+                                                onClick={() =>
+                                                    window.open(pub.pdf, '_blank')
+                                                }
+                                                className="text-[#d7153a] hover:underline"
+                                            >
                                                 {' '}
-                                                Read Abstract{' '}
-                                            </button>{' '}
-                                            <button className="text-[#d7153a] hover:underline">
-                                                {' '}
-                                                Download PDF{' '}
+                                                Read Paper{' '}
                                             </button>{' '}
                                         </div>{' '}
                                     </div>

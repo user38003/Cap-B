@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { writeToJsonDatabase } from '@/utils/jsonDatabase'; // 假设 utils 提供了这个方法
-
-let users: { name: string; email: string; password: string }[] = [];
+import { readTable, writeTable } from '@/utils/dbUtils';
 
 export async function POST(req: NextRequest) {
     const body = await req.json();
@@ -11,16 +9,24 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ message: 'All fields are required.' }, { status: 400 });
     }
 
+    let users = [];
+    try {
+        users = readTable('users');
+    } catch (err) {
+        // 如果表不存在，则初始化为空数组
+        users = [];
+    }
+
     const userExists = users.some((user) => user.email === email);
     if (userExists) {
         return NextResponse.json({ message: 'User already exists.' }, { status: 400 });
     }
 
-    const newUser = { name, email, password };
+    const newUser = { id: Date.now(), name, email, password };
     users.push(newUser);
 
-    // 将用户数据写入临时 JSON 数据库
-    await writeToJsonDatabase('users', users);
+    // 将用户数据写入 JSON 数据库
+    writeTable('users', users);
 
     return NextResponse.json({ message: 'User created successfully.' }, { status: 201 });
 }
