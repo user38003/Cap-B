@@ -7,8 +7,7 @@ export default function ManagePostsPage() {
   const [isEdit, setIsEdit] = useState(false);
   const [selectedPost, setSelectedPost] = useState(null);
   const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [imageFile, setImageFile] = useState(null);
+  const [postContent, setPostContent] = useState(''); // 替换 description
 
   useEffect(() => {
     fetchPosts();
@@ -24,8 +23,7 @@ export default function ManagePostsPage() {
     setIsEdit(false);
     setSelectedPost(null);
     setTitle('');
-    setDescription('');
-    setImageFile(null);
+    setPostContent('');
     setIsModalOpen(true);
   };
 
@@ -33,8 +31,7 @@ export default function ManagePostsPage() {
     setIsEdit(true);
     setSelectedPost(post);
     setTitle(post.title);
-    setDescription(post.description);
-    setImageFile(null);
+    setPostContent(post.post); // 赋值 post 字段
     setIsModalOpen(true);
   };
 
@@ -52,21 +49,16 @@ export default function ManagePostsPage() {
   };
 
   const handleSubmit = async () => {
-    if (!title || !description || (!isEdit && !imageFile)) {
-      alert('Please fill in all fields. For new post, image is required.');
+    if (!title || !postContent) {
+      alert('Please fill in all fields.');
       return;
     }
     const formData = new FormData();
     if (isEdit) formData.append('id', selectedPost.id);
     formData.append('title', title);
-    formData.append('description', description);
-    if (imageFile) formData.append('image', imageFile);
-
+    formData.append('post', postContent);
     const method = isEdit ? 'PUT' : 'POST';
-    const res = await fetch('/api/posts', {
-      method,
-      body: formData,
-    });
+    const res = await fetch('/api/posts', { method, body: formData });
     const data = await res.json();
     if (res.ok) {
       alert(data.message);
@@ -74,17 +66,6 @@ export default function ManagePostsPage() {
       fetchPosts();
     } else {
       alert(data.message);
-    }
-  };
-
-  const handleImageChange = (e) => {
-    if (e.target.files && e.target.files[0]) {
-      const file = e.target.files[0];
-      if (!file.type.startsWith('image/')) {
-        alert('Only image files are allowed.');
-        return;
-      }
-      setImageFile(file);
     }
   };
 
@@ -102,8 +83,7 @@ export default function ManagePostsPage() {
           <tr>
             <th className="px-6 py-3 border-b">ID</th>
             <th className="px-6 py-3 border-b">Title</th>
-            <th className="px-6 py-3 border-b">Description</th>
-            <th className="px-6 py-3 border-b">Image</th>
+            <th className="px-6 py-3 border-b">Post Content</th>
             <th className="px-6 py-3 border-b">Action</th>
           </tr>
         </thead>
@@ -112,12 +92,7 @@ export default function ManagePostsPage() {
             <tr key={post.id} className="text-center">
               <td className="px-6 py-4 border-b">{post.id}</td>
               <td className="px-6 py-4 border-b">{post.title}</td>
-              <td className="px-6 py-4 border-b">{post.description}</td>
-              <td className="px-6 py-4 border-b">
-                {post.image && (
-                  <img src={post.image} alt="post" className="h-12 mx-auto" />
-                )}
-              </td>
+              <td className="px-6 py-4 border-b">{post.post}</td>
               <td className="px-6 py-4 border-b space-x-2">
                 <button
                   onClick={() => handleEditClick(post)}
@@ -158,27 +133,15 @@ export default function ManagePostsPage() {
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-1">
-                Description
+              <label htmlFor="post" className="block text-sm font-medium text-gray-700 mb-1">
+                Post Content
               </label>
               <textarea
-                id="description"
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
+                id="post"
+                value={postContent}
+                onChange={(e) => setPostContent(e.target.value)}
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#d7153a] focus:border-[#d7153a]"
-                placeholder="Enter description"
-              />
-            </div>
-            <div className="mb-4">
-              <label htmlFor="image" className="block text-sm font-medium text-gray-700 mb-1">
-                Image {isEdit ? '(leave blank to keep current)' : ''}
-              </label>
-              <input
-                type="file"
-                id="image"
-                accept="image/*"
-                onChange={handleImageChange}
-                className="w-full"
+                placeholder="Enter post content"
               />
             </div>
             <div className="flex justify-end space-x-4">

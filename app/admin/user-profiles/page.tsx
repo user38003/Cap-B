@@ -9,7 +9,6 @@ export default function UserProfilesPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    // 加载用户数据
     useEffect(() => {
         fetchUsers();
     }, []);
@@ -20,7 +19,7 @@ export default function UserProfilesPage() {
         setUsers(data.users);
     };
 
-    // 打开编辑 modal，并预填数据
+
     const handleEditClick = (user) => {
         setSelectedUser(user);
         setName(user.name);
@@ -29,7 +28,7 @@ export default function UserProfilesPage() {
         setIsModalOpen(true);
     };
 
-    // 保存更新
+
     const handleSave = async () => {
         if (!name || !email || !password) {
             alert('Please fill in all fields.');
@@ -82,7 +81,7 @@ export default function UserProfilesPage() {
             </header>
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <h2 className="text-xl font-bold text-gray-900 mb-6">User Profiles Management</h2>
-                {/* 用户数据表格 */}
+                {/* User Data Table */}
                 <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
                     <thead>
                         <tr>
