@@ -4,5 +4,11 @@
     "name": "qingzhu",
     "email": "qingzhu@123.com",
     "password": "1234"
+  },
+  {
+    "id": 1748524175011,
+    "name": "admin",
+    "email": "admin@gmail.com",
+    "password": "1234"
   }
 ]

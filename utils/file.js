@@ -11,5 +11,5 @@ export async function saveUploadedFile(file) {
   const filename = `${Date.now()}_${file.name}`;
   const filePath = path.join(filesDir, filename);
   fs.writeFileSync(filePath, buffer);
-  return `/files/${filename}`; // 返回访问路径
+  return `/files/${filename}`; // 返回访问路径（通过rewrite或api访问）
 }

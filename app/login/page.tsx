@@ -7,13 +7,24 @@ export default function LoginPage() {
     const [password, setPassword] = useState('');
     const router = useRouter();
 
-    const handleLogin = (e: React.FormEvent) => {
+    const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
-        // Example: Check for admin credentials
-        if (email === 'admin@example.com' && password === 'admin123') {
-            router.push('/admin');
-        } else {
-            alert('Invalid credentials');
+        try {
+            const res = await fetch('/api/auth/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            });
+            const data = await res.json();
+            if (res.ok) {
+                // 登录成功，跳转到管理页（可根据实际角色跳转）
+                router.push('/admin');
+            } else {
+                alert(data.message);
+            }
+        } catch (err) {
+            console.error(err);
+            alert('An error occurred during login.');
         }
     };
 

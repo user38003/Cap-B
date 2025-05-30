@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 export async function GET(req: NextRequest, { params }) {
-  // 从 URL 参数中获取文件路径数组，并合并为字符串
+
   const { path: filePathArray } = params;
   const filePath = Array.isArray(filePathArray) ? filePathArray.join('/') : filePathArray;
   const fullPath = path.join(process.cwd(), 'files', filePath);
